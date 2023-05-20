@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formularz</title>
+    <link rel="stylesheet" type="text/css" href="background.css" />
+    <style>
+      #message {
+        width: 80%;
+        height: 500px; /* Możesz dostosować wysokość pola tekstowego według potrzeb */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text3">Formularz</h1>
+
+    <div class="text2">
+      <form id="MyForm" action="submit.php" method="post">
+        <label for="name">Imię:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Wiadomość:</label><br />
+        <textarea id="message" name="message" required></textarea><br />
+
+        <div
+          class="g-recaptcha"
+          data-sitekey="TWÓJ_PUBLICZNY_KLUCZ_RECAPTCHA"
+          data-callback="onSubmit"
+        ></div>
+
+        <input type="submit" value="Wyślij" />
+      </form>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("myForm").submit();
+      }
+    </script>
+  </body>
+</html>

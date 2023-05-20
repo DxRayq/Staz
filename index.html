@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ToNieTrojan.pl</title>
+    <link rel="stylesheet" type="text/css" href="background.css" />
+    <link rel="icon" href="trident.ico" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="text.css" />
+    <link rel="stylesheet" type="text/css" href="cennik.css" />
+    <link rel="stylesheet" type="text/css" href="navbardown.css" />
+    <link rel="stylesheet" type="text/css" href="upnavbar.css" />
+
+    <style>
+      .title1 {
+        font-size: 2em;
+        font-weight: normal;
+        text-align: center;
+        color: white;
+      }
+
+      .title2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .clock {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      font-family: monospace;
+      color: white;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="upnavbar">
+      <h1>ToNieTrojan.pl</h1>
+    </div>
+    <div class="header">
+      <div class="navigation navigation-right">
+        <ul>
+          <li>
+            <a id="startLink">Start</a>
+            <!--link zmienny-->
+          </li>
+          <li><a href="free.html">Demo</a></li>
+          <li><a href="#c">Cennik</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="Regulamin.pdf" download>Regulamin</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="formularz.html">Formularz</a></li>
+        </ul>
+      </div>
+      <div class="clock" id="clock"></div>
+
+
+      <script>
+          document.getElementById("startLink").addEventListener("click", function() {
+    location.reload();
+  });
+      </script>
+
+      <div class="clearfix"></div>
+    </div>
+    <br />
+    <br />
+    <div class="title1">
+      U nas znajdziesz wszystko. <br />
+      Nie ma tego czego szukasz? <br />
+      Wypełnij formularz, a my postaramy dodać się to w jak najkrótszym czasie!
+    </div>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <div id="c">
+      <div class="title2">Oferty</div>
+      <div class="container">
+        <div class="box left">
+          <a href="free.html">
+          <div class="text-container">
+            <div class="top-text">Free</div>
+            <img src="ets2.jpg" alt="Product Image" class="product-image" />
+            <div class="bottom-text">$0.00</div>
+          </div>
+          <div class="white-box">
+            <div class="white-box-text">
+              <ul>
+                <li>Euro Truck Simulator 2 DLC (Wszystkie)</li>
+                <li>Wkrótce</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box middle">
+          <a href="premium_max.html">
+            <div class="text-container">
+              <div class="top-text">Premium Max</div>
+              <img src="hld.jpg" alt="Product Image" class="product-image" />
+              <div class="bottom-text">$2.26</div>
+            </div>
+          </a>
+          <div class="white-box">
+            <div class="white-box-text">
+              Za jedyne 2.26$ możesz pobrać dowolną grę z naszej strony
+              ToNieTrojan.pl! Nie musisz się rejestrować...
+              <b>Dowiedz się więcej...</b>
+            </div>
+          </div>
+        </div>
+        <div class="box right">
+          <a href="premium.html">
+            <div class="text-container">
+              <div class="top-text">Premium</div>
+              <img src="wiedzmin.jpg" alt="Product Image" class="product-image" />
+              <div class="bottom-text">$1.13</div>
+            </div>
+          </a>
+          <div class="white-box">
+            <div class="white-box-text">
+              Za jedyne 1.13$ możesz pobrać dowolną grę do 250 zł z naszej strony
+              ToNieTrojan.pl! Nie musisz się rejestrować...
+              <b>Dowiedz się więcej...</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="bottom-bar">
+      <div class="contact-info">
+        Kontakt:<br />
+        Discord: DxRayq#4523<br />
+        E-mail: telewizoruhd5@gmail.com
+      </div>
+      <div class="centered-text">ToNieTrojan.pl</div>
+    </div>
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var day = now.getDate();
+        var month = now.getMonth() + 1; // Dodajemy 1, ponieważ getMonth() zwraca indeks miesiąca od 0 do 11
+        var year = now.getFullYear();
+    
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        day = day < 10 ? "0" + day : day;
+        month = month < 10 ? "0" + month : month;
+    
+        var time = hours + ":" + minutes + ":" + seconds;
+        var date = day + "/" + month + "/" + year;
+    
+        document.getElementById("clock").innerHTML = time + "<br>" + date;
+    
+        setTimeout(updateClock, 1000);
+      }
+    
+      updateClock();
+    </script>
+    
+  </body>
+</html>

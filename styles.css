@@ -1,0 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navigation-right li {
+  font-size: 1.2em;
+}
