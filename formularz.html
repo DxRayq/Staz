@@ -39,5 +39,13 @@
         document.getElementById("myForm").submit();
       }
     </script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfALSUmAAAAADC8lRDky73i1OwU2n_WNGGxSNKy"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6LfALSUmAAAAADC8lRDky73i1OwU2n_WNGGxSNKy', {action: 'login'}).then(function(token) {
+       ...
+    });
+});
+</script>
   </body>
 </html>
